@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, nota3, media;
+
+    printf("Digite a nota 1: ");
+    scanf("%f", &nota1);
+
+    printf("Digite a nota 2: ");
+    scanf("%f", &nota2);
+
+    if (nota1 < 4) {
+        printf("Digite a nota 3 para cobrir a nota 1: ");
+        scanf("%f", &nota3);
+
+        nota1 = nota3;
+    }
+    else if (nota2 < 4) {
+        printf("Digite a nota 3 para cobrir a nota 2: ");
+        scanf("%f", &nota3);
+
+        nota2 = nota3;
+    }
+
+    media = (nota1 + nota2) / 2;
+
+    printf("Media final: %.2f\n", media);
+
+    if (media >= 6) {
+        printf("Aluno aprovado!\n");
+    }
+    else {
+        printf("Aluno reprovado!\n");
+    }
+
+    return 0;
+}
